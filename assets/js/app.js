@@ -3,7 +3,7 @@
 (function(){
   try{
     var saved = localStorage.getItem('cmai_theme');
-    var v = saved ? saved : 'dark';
+    var v = saved || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     if(v === 'system'){ document.documentElement.removeAttribute('data-theme'); }
     else { document.documentElement.setAttribute('data-theme', v); }
   }catch(e){}
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var sel=document.getElementById('themeSelect');
   if(sel){
     try{
-      var saved=localStorage.getItem('cmai_theme')||'dark';
+      var saved=localStorage.getItem('cmai_theme')||'system';
       sel.value=saved;
       sel.addEventListener('change', function(e){
         var v=e.target.value; localStorage.setItem('cmai_theme', v);
