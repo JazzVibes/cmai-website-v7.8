@@ -30,7 +30,8 @@ nav.primary a.active,nav.primary a:hover{background:rgba(0,0,0,.04)}
 .menu-toggle{display:none;margin-left:auto;border:1px solid var(--line);background:var(--card);color:var(--text);padding:8px 12px;border-radius:10px;font-weight:800;cursor:pointer}
 @media (max-width:860px){
   .menu-toggle{display:inline-block}
-  nav.primary ul{display:none;position:absolute;right:20px;top:64px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.15);min-width:220px}
+  nav.primary{position:absolute;right:20px;top:64px;margin-left:0}
+  nav.primary ul{display:none;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.15);min-width:220px}
   nav.primary.open ul{display:block}
   nav.primary a{display:block;padding:10px 12px;border-radius:8px}
 }
