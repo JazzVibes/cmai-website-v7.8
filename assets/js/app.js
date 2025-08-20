@@ -109,8 +109,9 @@ document.addEventListener('DOMContentLoaded', function(){
     if(!nav) return;
     if(nav.classList.contains('open')){
       var inside = nav.contains(e.target) || (btn && btn.contains(e.target));
+      var link = e.target.closest ? e.target.closest('a') : null;
       if(!inside) closeNav();
-      if(e.target.tagName==='A') closeNav();
+      else if(link) closeNav();
     }
   });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeNav(); });
