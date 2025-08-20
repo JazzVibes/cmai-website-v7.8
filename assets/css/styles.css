@@ -1,0 +1,100 @@
+
+/* CMAI Karate — styles v7.8 */
+:root{
+  --bg:#ffffff; --text:#151515; --muted:#5c5f66;
+  --card:#ffffff; --chip:#f6f7f9; --line:#e3e5ea; --accent:#d93025; --accent2:#0066cc;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0b1118; --text:#e8eaf0; --muted:#aab2bd; --card:#0f1722; --chip:#121a26; --line:#1f2a3a; --accent:#ff645e; --accent2:#8ab4f8; }
+}
+html[data-theme="light"]{ --bg:#ffffff; --text:#151515; --muted:#5c5f66; --card:#ffffff; --chip:#f6f7f9; --line:#e3e5ea; --accent:#d93025; --accent2:#0066cc; }
+html[data-theme="dark"]{ --bg:#0b1118; --text:#e8eaf0; --muted:#aab2bd; --card:#0f1722; --chip:#121a26; --line:#1f2a3a; --accent:#ff645e; --accent2:#8ab4f8; }
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;transition:background-color .25s,color .25s}
+img{max-width:100%;display:block}
+a{color:var(--accent2);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.section{padding:28px 0}
+.section.open{background:transparent;border:0;box-shadow:none}
+header.site-header{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);z-index:50;transition:background-color .25s,border-color .25s}
+.header-inner{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--text)}
+.brand img{width:36px;height:36px;border-radius:50%;border:1px solid var(--line)}
+nav.primary{margin-left:auto}
+nav.primary ul{display:flex;gap:8px;list-style:none;margin:0;padding:0}
+nav.primary a{display:inline-block;padding:10px 12px;border-radius:10px;color:var(--text)}
+nav.primary a.active,nav.primary a:hover{background:rgba(0,0,0,.04)}
+@media (prefers-color-scheme: dark){ nav.primary a.active,nav.primary a:hover{background:rgba(255,255,255,.06)} }
+.menu-toggle{display:none;margin-left:auto;border:1px solid var(--line);background:var(--card);color:var(--text);padding:8px 12px;border-radius:10px;font-weight:800;cursor:pointer}
+@media (max-width:860px){
+  .menu-toggle{display:inline-block}
+  nav.primary ul{display:none;position:absolute;right:20px;top:64px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:0 10px 30px rgba(0,0,0,.15);min-width:220px}
+  nav.primary.open ul{display:block}
+  nav.primary a{display:block;padding:10px 12px;border-radius:8px}
+}
+
+h1,h2,h3{line-height:1.2;margin:0 0 12px 0}
+h1{font-size:2.1rem} h2{font-size:1.7rem} h3{font-size:1.2rem}
+.lead{font-size:1.15rem;color:var(--muted)}
+.prose{max-width:72ch;line-height:1.75;font-size:1.06rem}
+.prose p{margin:0 0 1rem 0}
+.prose h2{margin:2rem 0 .75rem 0;font-size:1.9rem}
+.prose h3{margin:1.5rem 0 .5rem 0;font-size:1.25rem}
+.prose ul{margin:0 0 1rem 1.2rem}
+
+.hero{padding:26px 0}
+.hero h1{margin-bottom:6px}
+.hero p{margin:0}
+
+.hero-image{margin:18px 0 8px 0;border-radius:14px;border:1px solid var(--line);overflow:hidden}
+.hero-image img{width:100%;height:auto;display:block}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:900px){ .grid-3{grid-template-columns:1fr}}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:background-color .25s,border-color .25s}
+.card.surface{background:transparent}
+
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--chip);color:var(--text);text-decoration:none}
+.btn.alt{background:transparent}
+.btn.small{padding:6px 10px;font-size:.95rem}
+
+blockquote.review{border-left:4px solid var(--accent);margin:0 0 1.25rem 0;padding:.25rem 1rem .5rem 1rem;background:transparent}
+blockquote .who{font-weight:600}
+blockquote .when{opacity:.8;font-weight:400;margin-left:6px}
+blockquote.review p{margin:.25rem 0 0 0}
+
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:900px){ .video-grid{grid-template-columns:1fr} }
+
+.bios .bio-card{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start;padding:0;border:0;background:transparent}
+.bios .bio-card img{width:120px;height:120px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.bios .bio-card .role{opacity:.85;margin-top:-4px;margin-bottom:6px}
+.bios .bio-card .meta{font-size:.95rem;opacity:.95;margin-top:6px}
+.bios .bio-card .tags{margin-top:6px}
+.bios .bio-card + .bio-card{margin-top:26px}
+.tag{display:inline-block;border:1px solid var(--line);background:var(--chip);padding:4px 8px;border-radius:999px;font-size:.9rem;margin-right:6px}
+
+.events .card{background:transparent;border:1px dashed var(--line)}
+
+.glossary-strip{display:flex;gap:10px;flex-wrap:wrap}
+.glossary-strip .chip{border:1px solid var(--line);background:var(--chip);padding:8px 10px;border-radius:999px;font-size:.95rem}
+.glossary-strip .chip abbr{border-bottom:1px dotted var(--line);text-decoration:none;cursor:help}
+
+/* Schedule table */
+.schedule{width:100%;border-collapse:separate;border-spacing:0 6px}
+.schedule th{font-weight:700;text-align:left;padding:6px 10px;color:var(--text)}
+.schedule td{padding:8px 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.schedule tr td:first-child{border-left:1px solid var(--line);border-radius:10px 0 0 10px;background:var(--chip);min-width:76px}
+.schedule tr td:last-child{border-right:1px solid var(--line);border-radius:0 10px 10px 0}
+.schedule .note{opacity:.85;font-size:.92rem;margin-left:6px}
+
+footer.site-footer{background:var(--chip);border-top:1px solid var(--line);margin-top:20px;transition:background-color .25s,border-color .25s}
+footer .container{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;padding-top:18px;padding-bottom:12px}
+@media (max-width:860px){ footer .container{grid-template-columns:1fr} }
+.footer-links a.btn{margin:4px 6px 0 0}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;margin-top:8px}
+.muted{color:var(--muted)}
+.theme-select{padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text)}

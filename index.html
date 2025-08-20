@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMAI Karate</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.addEventListener('DOMContentLoaded',()=>{var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();});</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="CMAI logo"><span>CMAI Karate</span></a>
+    <button id="navToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryMenu">☰</button>
+    <nav class="primary" id="primaryMenu">
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a class="" href="programs.html">Programs</a></li>
+        <li><a class="" href="curriculum.html">Curriculum</a></li>
+        <li><a class="" href="events.html">Events</a></li>
+        <li><a class="" href="biographies.html">Biographies</a></li>
+        <li><a class="" href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero section open">
+    <div class="hero-image"><img src="assets/img/group.jpg" alt="CMAI group photo"></div>
+    <h1>Train with purpose. Lead with respect.</h1>
+    <p class="lead">Okinawan Karate • Small Circle Jujitsu • Modern Arnis — for kids, teens, and adults.</p>
+  </section>
+
+  <section class="section open">
+    <h2>Now &amp; Next</h2>
+    <p class="prose">Highlights from our upcoming schedule. See <a href="events.html">all events</a> for details.</p>
+    <div id="homeEvents" class="grid-3 events"></div>
+    <script id="events-data" type="application/json">[{"title": "Florida Shihan Dai \u2014 Training Session (at CMAI)", "date": "TBD", "time": "TBD", "location": "CMAI Karate, 8029 Ramona Blvd W, Jacksonville, FL", "description": "State training for Florida Shihan Dai and candidates. Hosted at CMAI; open mat for visiting instructors.", "cta": {"label": "Details/RSVP on Facebook", "url": "https://www.facebook.com/people/CMAI-Karate/100063614228167/"}}, {"title": "Quarterly Belt Testing Week", "date": "Next: 2025-10 (week 4)", "time": "Evenings", "location": "CMAI Karate", "description": "Formal evaluations with pre\u2011checks in class. See Curriculum for requirements."}, {"title": "Summer Weapons Intensive", "date": "2025-06", "time": "Sat 10:00\u201312:00", "location": "CMAI Karate", "description": "Modern Arnis focus: striking patterns, disarms, and empty\u2011hand transfers."}]</script>
+  </section>
+
+  <section class="section open">
+    <h2>Class schedule</h2>
+    <div id="homeSchedule"></div>
+    <script id="schedule-data" type="application/json">{"Mon": [{"time": "5:30\u20136:15p", "class": "Kids (7\u201312)"}, {"time": "6:15\u20137:00p", "class": "Teens"}, {"time": "7:00\u20138:00p", "class": "Adults/All\u2011levels"}, {"time": "8:00\u20138:30p", "class": "Weapons", "note": "Monthly"}], "Tue": [{"time": "6:00\u20137:00p", "class": "Modern Arnis (All\u2011levels)"}], "Wed": [{"time": "5:30\u20136:15p", "class": "Kids (7\u201312)"}, {"time": "6:15\u20137:00p", "class": "Teens"}, {"time": "7:00\u20138:00p", "class": "Adults/All\u2011levels"}], "Thu": [{"time": "6:00\u20137:00p", "class": "Jujitsu / Tuite Lab", "note": "Focus block"}], "Fri": [], "Sat": [{"time": "10:00\u201312:00p", "class": "Seminar/Intensive", "note": "As scheduled"}], "Sun": []}</script>
+  </section>
+
+  <section class="section open">
+    <h2>Full reviews</h2>
+    <blockquote class="review"><div class="who">Ricky Davis Jr. <span class="when">• 2024-09-09</span></div><p>It&#x27;s a great place to keep your kids or even adults in great shape while learning real self‑defense. Grand Master Carter is great with the kids.</p></blockquote><blockquote class="review"><div class="who">Michael Price <span class="when">• 2022-04-18</span></div><p>Come on out and find out.</p></blockquote><blockquote class="review"><div class="who">Vicky Price <span class="when">• 2021-08-26</span></div><p>Great instructors and a fun learning environment!</p></blockquote><blockquote class="review"><div class="who">Ricky Pritchard II <span class="when">• 2017-12-19</span></div><p>Teaching more than martial arts—students learn manners, respect, and other life lessons.</p></blockquote><blockquote class="review"><div class="who">Sarah Stilwell <span class="when">• 2016-12-17</span></div><p>Awesome instructors! My son started at age 4 and kept up thanks to careful instruction and muscle‑memory focus. He loves it here and I’m a proud mom!</p></blockquote>
+    <p><a class="btn" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=100063614228167&sk=reviews">More reviews on Facebook</a></p>
+    <script id="reviews-data" type="application/json">[{"name": "Ricky Davis Jr.", "date": "2024-09-09", "text": "It's a great place to keep your kids or even adults in great shape while learning real self\u2011defense. Grand Master Carter is great with the kids."}, {"name": "Michael Price", "date": "2022-04-18", "text": "Come on out and find out."}, {"name": "Vicky Price", "date": "2021-08-26", "text": "Great instructors and a fun learning environment!"}, {"name": "Ricky Pritchard II", "date": "2017-12-19", "text": "Teaching more than martial arts\u2014students learn manners, respect, and other life lessons."}, {"name": "Sarah Stilwell", "date": "2016-12-17", "text": "Awesome instructors! My son started at age 4 and kept up thanks to careful instruction and muscle\u2011memory focus. He loves it here and I\u2019m a proud mom!"}]</script>
+  </section>
+
+  <section class="section open" aria-labelledby="glossary-strip">
+    <h2 id="glossary-strip">Quick glossary</h2>
+    <p class="prose">Terms you’ll see throughout the site. See the full <a href="curriculum.html#glossary">Curriculum → Glossary</a>.</p>
+    <div class="glossary-strip">
+      <span class="chip"><abbr title="A respectful acknowledgement—'understood'">Osu</abbr></span>
+      <span class="chip"><abbr title="Bow—respect shown entering/exiting the mat, and with partners">Rei</abbr></span>
+      <span class="chip"><abbr title="Uniform / Belt">Gi / Obi</abbr></span>
+      <span class="chip"><abbr title="Form / Application">Kata / Bunkai</abbr></span>
+      <span class="chip"><abbr title="Okinawan joint manipulation and control skills">Tuite</abbr></span>
+      <span class="chip"><abbr title="Modern Arnis flow drill for timing and sensitivity">Tapi‑Tapi</abbr></span>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <p>8029 Ramona Blvd W<br>Jacksonville, FL 32221</p>
+      <p><a href="tel:+19047427007">(904) 742-7007</a></p>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <div class="footer-links">
+        <a href="programs.html#kids" class="btn small alt">Kids</a>
+        <a href="programs.html#teens" class="btn small alt">Teens</a>
+        <a href="programs.html#adults" class="btn small alt">Adults</a>
+        <a href="programs.html#weapons" class="btn small alt">Weapons</a>
+        <a href="programs.html#jujitsu" class="btn small alt">Jujitsu</a>
+        <a href="programs.html#modern-arnis" class="btn small alt">Modern Arnis</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Social</h4>
+      <p><a target="_blank" rel="noopener" href="https://www.facebook.com/people/CMAI-Karate/100063614228167/">Facebook</a><br>
+         <a target="_blank" rel="noopener" href="https://www.youtube.com/@cmaikarate3400">YouTube</a></p>
+      <div style="margin-top:8px">
+        <label for="themeSelect"><small class="muted">Theme</small></label><br>
+        <select id="themeSelect" class="theme-select" aria-label="Theme select">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark" selected>Dark</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <small class="muted">© <span id="year"></span> Carters Martial Arts Institute — CMAI Karate.</small>
+  </div>
+</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

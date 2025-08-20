@@ -1,0 +1,57 @@
+{
+  "Mon": [
+    {
+      "time": "5:30\u20136:15p",
+      "class": "Kids (7\u201312)"
+    },
+    {
+      "time": "6:15\u20137:00p",
+      "class": "Teens"
+    },
+    {
+      "time": "7:00\u20138:00p",
+      "class": "Adults/All\u2011levels"
+    },
+    {
+      "time": "8:00\u20138:30p",
+      "class": "Weapons",
+      "note": "Monthly"
+    }
+  ],
+  "Tue": [
+    {
+      "time": "6:00\u20137:00p",
+      "class": "Modern Arnis (All\u2011levels)"
+    }
+  ],
+  "Wed": [
+    {
+      "time": "5:30\u20136:15p",
+      "class": "Kids (7\u201312)"
+    },
+    {
+      "time": "6:15\u20137:00p",
+      "class": "Teens"
+    },
+    {
+      "time": "7:00\u20138:00p",
+      "class": "Adults/All\u2011levels"
+    }
+  ],
+  "Thu": [
+    {
+      "time": "6:00\u20137:00p",
+      "class": "Jujitsu / Tuite Lab",
+      "note": "Focus block"
+    }
+  ],
+  "Fri": [],
+  "Sat": [
+    {
+      "time": "10:00\u201312:00p",
+      "class": "Seminar/Intensive",
+      "note": "As scheduled"
+    }
+  ],
+  "Sun": []
+}

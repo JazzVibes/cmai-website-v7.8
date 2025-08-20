@@ -1,0 +1,125 @@
+[
+  {
+    "name": "Sensei Jerald Carter",
+    "photo": "assets/img/bios/jerald.png",
+    "titles": [
+      "Founder, CMAI Karate",
+      "Head Instructor"
+    ],
+    "systems": [
+      "Okinawan Karate (Ryukyu Kempo)",
+      "Small Circle Jujitsu (SCJ)",
+      "Modern Arnis"
+    ],
+    "teachers": [
+      "Master Jerry Williamson (Shotokan)",
+      "Grandmaster Jack Hogan (Ryukyu Kempo / Kyusho)",
+      "Renshi Michael P. Andrews (HKI)",
+      "Professor Leon Jay (SCJ)",
+      "Guro Bruce Chiu (Modern Arnis)"
+    ],
+    "ranks": [
+      "Ryukyu Kempo \u2014 4th Dan (2004)",
+      "Kyusho \u2014 Master Level 1 (2004)",
+      "Ryukyu Kempo \u2014 5th Dan (2007, HKI)",
+      "Modern Arnis \u2014 1st Degree (under Guro Bruce Chiu)",
+      "Small Circle Jujitsu \u2014 2nd Dan"
+    ],
+    "tags": [
+      "Dojo Owner",
+      "Curriculum Lead"
+    ],
+    "summary": "Sensei Carter blends Okinawan striking with SCJ joint\u2011control and Modern Arnis flow. He emphasizes safety, fundamentals, and respectful culture so students of all ages can progress."
+  },
+  {
+    "name": "Grandmaster Jack Hogan (1949\u20132017)",
+    "photo": "assets/img/bios/jack-hogan.jpg",
+    "titles": [
+      "Founder, Hogan Karate International (HKI)"
+    ],
+    "systems": [
+      "Ryukyu Kempo (Okinawan Karate)",
+      "Kyusho concepts",
+      "Small Circle Jujitsu (influence)"
+    ],
+    "teachers": [
+      "Collaborators & influences: Prof. Wally Jay (SCJ), GM Remy A. Presas (Modern Arnis), George Dillman (Kyusho)"
+    ],
+    "ranks": [
+      "10th Dan \u2014 Ryukyu Kempo",
+      "5th Dan \u2014 Shotokan Karate"
+    ],
+    "tags": [
+      "Mentor",
+      "Lineage"
+    ],
+    "summary": "GM Hogan specialized in practical self\u2011defense and pressure\u2011point concepts, teaching internationally and shaping CMAI\u2019s core approach to clean basics and courtesy."
+  },
+  {
+    "name": "Professor Wally Jay (1917\u20132011)",
+    "photo": "assets/img/bios/wally-jay.jpg",
+    "titles": [
+      "Founder, Small Circle Jujitsu\u2122"
+    ],
+    "systems": [
+      "Small Circle Jujitsu",
+      "Danzan Ry\u016b / Kodenkan Jujutsu",
+      "Judo"
+    ],
+    "teachers": [
+      "Seishiro (Henry) Okazaki",
+      "Ken Kawachi",
+      "Juan Gomez"
+    ],
+    "ranks": [
+      "10th\u2011dan Jujutsu",
+      "6th\u2011dan Judo"
+    ],
+    "tags": [
+      "Lineage"
+    ],
+    "summary": "Prof. Jay refined precision and leverage into Small Circle Jujitsu\u2014principles that inform CMAI\u2019s joint\u2011control and safety methods."
+  },
+  {
+    "name": "Professor Leon Jay",
+    "photo": "assets/img/bios/leon-jay.jpg",
+    "titles": [
+      "Headmaster, Small Circle Jujitsu (2nd Generation)"
+    ],
+    "systems": [
+      "Small Circle Jujitsu",
+      "Kodenkan Jujitsu / Kodokan Judo (background)"
+    ],
+    "teachers": [
+      "Prof. Wally Jay"
+    ],
+    "ranks": [
+      "Head of System (appointed 2002)"
+    ],
+    "tags": [
+      "Mentor"
+    ],
+    "summary": "Prof. Leon Jay continues SCJ worldwide; his seminars and mentorship reinforce tuite, structure, and safe practice at CMAI."
+  },
+  {
+    "name": "Guro Bruce Chiu",
+    "photo": "assets/img/bios/bruce-chiu.png",
+    "titles": [
+      "Founder, Arnis International"
+    ],
+    "systems": [
+      "Modern Arnis"
+    ],
+    "teachers": [
+      "Grandmaster Remy A. Presas"
+    ],
+    "ranks": [
+      "Modern Arnis \u2014 senior instructor (Arnis International)"
+    ],
+    "tags": [
+      "Weapons",
+      "Flow"
+    ],
+    "summary": "A personal student of GM Remy Presas, Guro Bruce supports our Modern Arnis program\u2014flow drills, disarms, and empty\u2011hand translations linked back to kata."
+  }
+]
