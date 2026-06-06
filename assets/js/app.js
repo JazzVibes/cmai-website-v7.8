@@ -1170,15 +1170,15 @@ function initThemeSelect() {
   });
 }
 
-function initQuickGlossaryPopovers() {
-  var terms = Array.prototype.slice.call(document.querySelectorAll(".quick-glossary .glossary-term[data-definition]"));
+function initGlossaryPopovers() {
+  var terms = Array.prototype.slice.call(document.querySelectorAll(".glossary-strip .glossary-term[data-definition]"));
   if (!terms.length) return;
 
   var popover = document.createElement("div");
   var title = document.createElement("strong");
   var body = document.createElement("span");
-  popover.id = "quickGlossaryPopover";
-  popover.className = "quick-glossary-popover";
+  popover.id = "glossaryPopover";
+  popover.className = "glossary-popover";
   popover.setAttribute("role", "tooltip");
   popover.append(title, body);
   document.body.appendChild(popover);
@@ -1255,7 +1255,7 @@ function initQuickGlossaryPopovers() {
   });
   document.addEventListener("click", function(event) {
     if (!activeTerm) return;
-    if (!event.target.closest || !event.target.closest(".quick-glossary")) hidePopover();
+    if (!event.target.closest || !event.target.closest(".glossary-strip")) hidePopover();
   });
   window.addEventListener("resize", function() {
     if (activeTerm) positionPopover(activeTerm);
@@ -1313,7 +1313,7 @@ document.addEventListener("DOMContentLoaded", function() {
   decorateIcons(document);
   initNav();
   initThemeSelect();
-  initQuickGlossaryPopovers();
+  initGlossaryPopovers();
   renderHeroGallery();
   initPageData();
   var year = document.getElementById("year");

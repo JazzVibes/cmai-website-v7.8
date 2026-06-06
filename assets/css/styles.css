@@ -908,21 +908,22 @@ ol {
   top: 50%;
 }
 
-.sigil-karate::before {
-  width: 38px;
-  height: 38px;
-  border: 2px solid var(--gold);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
+.sigil-karate {
+  border-color: rgba(225, 187, 116, 0.74);
+  background:
+    radial-gradient(circle at 50% 25%, var(--gold) 0 10%, transparent 11%),
+    radial-gradient(circle at 50% 75%, var(--ink) 0 10%, transparent 11%),
+    radial-gradient(circle at 50% 25%, var(--ink) 0 25%, transparent 26%),
+    radial-gradient(circle at 50% 75%, #f8ead0 0 25%, transparent 26%),
+    linear-gradient(90deg, #f8ead0 0 50%, var(--ink) 50% 100%);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.32),
+    inset 0 0 0 2px rgba(72, 39, 18, 0.45);
 }
 
+.sigil-karate::before,
 .sigil-karate::after {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: var(--rust);
-  box-shadow: 0 0 0 7px rgba(183, 70, 46, 0.16);
-  transform: translate(-50%, -50%);
+  content: none;
 }
 
 .sigil-small-circle::before {
@@ -1191,11 +1192,14 @@ ol {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .chip {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 36px;
   padding: 0 12px;
   border: 1px solid rgba(189, 164, 125, 0.45);
@@ -1209,7 +1213,7 @@ ol {
 button.chip {
   appearance: none;
   font: inherit;
-  text-align: left;
+  text-align: center;
 }
 
 .chip abbr {
@@ -1218,25 +1222,25 @@ button.chip {
   cursor: help;
 }
 
-.quick-glossary .glossary-term {
+.glossary-term {
   cursor: help;
   transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
 }
 
-.quick-glossary .glossary-term:hover,
-.quick-glossary .glossary-term:focus-visible,
-.quick-glossary .glossary-term[aria-expanded="true"] {
+.glossary-term:hover,
+.glossary-term:focus-visible,
+.glossary-term[aria-expanded="true"] {
   border-color: rgba(183, 70, 46, 0.54);
   background: rgba(183, 70, 46, 0.1);
   color: var(--ink);
 }
 
-.quick-glossary .glossary-term:focus-visible {
+.glossary-term:focus-visible {
   outline: 3px solid rgba(44, 106, 222, 0.34);
   outline-offset: 3px;
 }
 
-.quick-glossary-popover {
+.glossary-popover {
   position: fixed;
   z-index: 90;
   display: grid;
@@ -1257,19 +1261,19 @@ button.chip {
   transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s ease;
 }
 
-.quick-glossary-popover.is-visible {
+.glossary-popover.is-visible {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }
 
-.quick-glossary-popover strong {
+.glossary-popover strong {
   color: #fff;
   font-size: 0.95rem;
   line-height: 1.25;
 }
 
-.quick-glossary-popover span {
+.glossary-popover span {
   color: rgba(255, 247, 232, 0.82);
   font-size: 0.9rem;
   line-height: 1.45;
