@@ -3,150 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CMAI Karate</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script>document.addEventListener('DOMContentLoaded',()=>{var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();});</script>
+  <meta name="description" content="CMAI Karate programs for kids, teens, adults, weapons, jujitsu, and Modern Arnis in Jacksonville.">
+  <title>Programs | CMAI Karate</title>
+  <script>try{var t=localStorage.getItem("cmai_theme")||"system";if(t==="system"){document.documentElement.removeAttribute("data-theme")}else{document.documentElement.setAttribute("data-theme",t)}}catch(e){}</script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260606-glossary-popover">
 </head>
-<body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="CMAI logo"><span>CMAI Karate</span></a>
-    <button id="navToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryMenu">☰</button>
-    <nav class="primary" id="primaryMenu">
-      <ul>
-        <li><a class="" href="index.html">Home</a></li>
-        <li><a class="active" href="programs.html">Programs</a></li>
-        <li><a class="" href="curriculum.html">Curriculum</a></li>
-        <li><a class="" href="events.html">Events</a></li>
-        <li><a class="" href="biographies.html">Biographies</a></li>
-        <li><a class="" href="join.html">Join</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<body data-page="programs">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="siteHeader"></div>
 
-<main class="container">
-  <section class="hero section open">
-    <h2>Programs</h2>
-    <p class="prose">Every program builds balance, timing, and confidence. Classes scale in intensity so beginners learn safely and advanced students stay challenged.</p>
-  </section>
-
-  <section id="kids" class="section open">
-    <h3>Kids (7–12)</h3>
-    <div class="prose">
-      <p>Short rounds, clear targets, and a strong safety culture. We focus on listening skills, posture, and courteous behavior while building real self‑defense basics.</p>
-      <ul>
-        <li>Foundations: stances, footwork, blocks, strikes, rolls.</li>
-        <li>Respect &amp; responsibility: “Osu,” lining up, and partner rules.</li>
-        <li>Rank steps: stripes toward each belt; testing when ready.</li>
-      </ul>
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Programs</h1>
+      <p class="lead">Every class builds balance, timing, courtesy, and confidence. Students start safely, then progress into stronger applications as readiness grows.</p>
+      <div class="hero-actions">
+        <a class="btn" data-icon="star" href="join.html">Start the Trial</a>
+        <a class="btn light" data-icon="calendar" href="#schedule">View Schedule</a>
+      </div>
     </div>
   </section>
 
-  <section id="teens" class="section open">
-    <h3>Teens</h3>
-    <div class="prose">
-      <p>Stronger conditioning and problem‑solving. We connect kata to application and develop leadership through assistant‑teaching moments.</p>
+  <section class="section light">
+    <div class="container program-list">
+      <article id="kids" class="program-row">
+        <div class="meta">Ages 7-12</div>
+        <div>
+          <h2>Kids</h2>
+          <div class="prose">
+            <p>Short rounds, clear targets, and a strong safety culture. We focus on listening skills, posture, courteous behavior, and practical self-defense basics.</p>
+            <ul>
+              <li>Foundations: stances, footwork, blocks, strikes, rolls.</li>
+              <li>Respect and responsibility: lining up, partner rules, and focus habits.</li>
+              <li>Progress markers: stripes toward each belt, with testing when ready.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article id="teens" class="program-row">
+        <div class="meta">Teen track</div>
+        <div>
+          <h2>Teens</h2>
+          <p class="prose">Stronger conditioning, problem-solving, and leadership. Students connect kata to application and learn how to train with control and maturity.</p>
+        </div>
+      </article>
+      <article id="adults" class="program-row">
+        <div class="meta">All levels</div>
+        <div>
+          <h2>Adults</h2>
+          <p class="prose">Skill-first training that respects time and joints. Classes blend striking, clinch entries, Small Circle Jujitsu controls, and modern scenario work.</p>
+        </div>
+      </article>
+      <article id="weapons" class="program-row">
+        <div class="meta">Coordination</div>
+        <div>
+          <h2>Weapons</h2>
+          <p class="prose">Modern Arnis stick work, empty-hand translations, and traditional implements build timing, distance, flow, and structure.</p>
+        </div>
+      </article>
+      <article id="jujitsu" class="program-row">
+        <div class="meta">Control</div>
+        <div>
+          <h2>Jujitsu / Tuite</h2>
+          <p class="prose">Small Circle principles - off-balancing, joint control, and safe practice - applied to common standing grabs, holds, and transitions.</p>
+        </div>
+      </article>
+      <article id="modern-arnis" class="program-row">
+        <div class="meta">Flow</div>
+        <div>
+          <h2>Modern Arnis</h2>
+          <p class="prose">Tapi-tapi, disarms, and empty-hand transfers reinforce timing and structure for striking and grappling.</p>
+        </div>
+      </article>
     </div>
   </section>
 
-  <section id="adults" class="section open">
-    <h3>Adults</h3>
-    <div class="prose">
-      <p>Skill‑first training that respects time and joints. We blend striking, clinch, and Small Circle Jujitsu controls with modern scenario work.</p>
+  <section id="schedule" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Class schedule</h2>
+        <p class="section-lead">Schedule is subject to class announcements and special events.</p>
+      </div>
+      <div id="progSchedule"></div>
     </div>
   </section>
 
-  <section id="weapons" class="section open">
-    <h3>Weapons</h3>
-    <div class="prose">
-      <p>Modern Arnis stick work and empty‑hand translations, plus traditional implements for coordination, timing, and flow.</p>
-    </div>
-  </section>
-
-  <section id="jujitsu" class="section open">
-    <h3>Jujitsu</h3>
-    <div class="prose">
-      <p>Small Circle principles—off‑balancing, joint control, and safe practice—applied to common standing grabs and holds.</p>
-    </div>
-  </section>
-
-  <section id="modern-arnis" class="section open">
-    <h3>Modern Arnis</h3>
-    <div class="prose">
-      <p>Flow drills (tapi‑tapi), disarms, and empty‑hand transfers that reinforce timing and structure for striking and grappling.</p>
-    </div>
-  </section>
-
-  <section class="section open">
-    <h2>Class schedule</h2>
-    <div id="progSchedule"></div>
-    <script id="schedule-data" type="application/json">{"Mon": [{"time": "5:30\u20136:15p", "class": "Kids (7\u201312)"}, {"time": "6:15\u20137:00p", "class": "Teens"}, {"time": "7:00\u20138:00p", "class": "Adults/All\u2011levels"}, {"time": "8:00\u20138:30p", "class": "Weapons", "note": "Monthly"}], "Tue": [{"time": "6:00\u20137:00p", "class": "Modern Arnis (All\u2011levels)"}], "Wed": [{"time": "5:30\u20136:15p", "class": "Kids (7\u201312)"}, {"time": "6:15\u20137:00p", "class": "Teens"}, {"time": "7:00\u20138:00p", "class": "Adults/All\u2011levels"}], "Thu": [{"time": "6:00\u20137:00p", "class": "Jujitsu / Tuite Lab", "note": "Focus block"}], "Fri": [], "Sat": [{"time": "10:00\u201312:00p", "class": "Seminar/Intensive", "note": "As scheduled"}], "Sun": []}</script>
-  </section>
-
-  <section class="section open">
-    <h3>Dojo etiquette &amp; FAQs</h3>
-    <div class="prose">
-      <ul>
-        <li><strong>Respect first:</strong> bow on/off the mat; thank your partner; light contact unless told otherwise.</li>
-        <li><strong>Safety:</strong> tap early/often; coaches will stop a drill if technique or pace slips.</li>
-        <li><strong>Gear:</strong> clean gi, water bottle, optional mouthguard/shin pads for teens/adults.</li>
-        <li><strong>Testing:</strong> stripes mark progress; schedule posted on Events; promotion when skills are <em>ready</em>.</li>
-        <li><strong>Parents:</strong> watch classes; we’ll give 1–2 focus items for practice at home.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section open" aria-labelledby="glossary-strip">
-    <h2 id="glossary-strip">Quick glossary</h2>
-    <p class="prose">A few terms used in classes. Full list in <a href="curriculum.html#glossary">Curriculum</a>.</p>
-    <div class="glossary-strip">
-      <span class="chip"><abbr title="A respectful acknowledgement—'understood'">Osu</abbr></span>
-      <span class="chip"><abbr title="Bow—respect shown entering/exiting the mat, and with partners">Rei</abbr></span>
-      <span class="chip"><abbr title="Uniform / Belt">Gi / Obi</abbr></span>
-      <span class="chip"><abbr title="Form / Application">Kata / Bunkai</abbr></span>
-      <span class="chip"><abbr title="Okinawan joint manipulation and control skills">Tuite</abbr></span>
-      <span class="chip"><abbr title="Modern Arnis flow drill for timing and sensitivity">Tapi‑Tapi</abbr></span>
+  <section class="section compact light">
+    <div class="container grid-3">
+      <article class="card"><div class="card-body"><h3>Respect first</h3><p>Bow on and off the mat, thank your partner, and use controlled contact unless instructed otherwise.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Safety culture</h3><p>Tap early, listen closely, and expect coaches to pause drills when technique or pace slips.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Parent friendly</h3><p>Parents can watch class and get one or two focus items for practice at home.</p></div></article>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-col">
-      <h4>Visit</h4>
-      <p>8029 Ramona Blvd W<br>Jacksonville, FL 32221</p>
-      <p><a href="tel:+19047427007">(904) 742-7007</a></p>
-    </div>
-    <div class="footer-col">
-      <h4>Programs</h4>
-      <div class="footer-links">
-        <a href="programs.html#kids" class="btn small alt">Kids</a>
-        <a href="programs.html#teens" class="btn small alt">Teens</a>
-        <a href="programs.html#adults" class="btn small alt">Adults</a>
-        <a href="programs.html#weapons" class="btn small alt">Weapons</a>
-        <a href="programs.html#jujitsu" class="btn small alt">Jujitsu</a>
-        <a href="programs.html#modern-arnis" class="btn small alt">Modern Arnis</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Social</h4>
-      <p><a target="_blank" rel="noopener" href="https://www.facebook.com/people/CMAI-Karate/100063614228167/">Facebook</a><br>
-         <a target="_blank" rel="noopener" href="https://www.youtube.com/@cmaikarate3400">YouTube</a></p>
-      <div style="margin-top:8px">
-        <label for="themeSelect"><small class="muted">Theme</small></label><br>
-        <select id="themeSelect" class="theme-select" aria-label="Theme select">
-          <option value="system" selected>System</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </div>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <small class="muted">© <span id="year"></span> Carters Martial Arts Institute — CMAI Karate.</small>
-  </div>
-</footer>
-<script src="assets/js/app.js"></script>
+<div id="siteFooter"></div>
+<script src="assets/js/app.js?v=20260606-glossary-popover"></script>
 </body>
 </html>

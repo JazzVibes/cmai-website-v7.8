@@ -1,27 +1,31 @@
 [
   {
-    "title": "Florida Shihan Dai \u2014 Training Session (at CMAI)",
+    "title": "Florida Shihan Dai Training Session",
     "date": "TBD",
     "time": "TBD",
     "location": "CMAI Karate, 8029 Ramona Blvd W, Jacksonville, FL",
-    "description": "State training for Florida Shihan Dai and candidates. Hosted at CMAI; open mat for visiting instructors.",
+    "description": "State training for Florida Shihan Dai and candidates. Hosted at CMAI with open mat time for visiting instructors.",
     "cta": {
-      "label": "Details/RSVP on Facebook",
+      "label": "Details on Facebook",
       "url": "https://www.facebook.com/people/CMAI-Karate/100063614228167/"
     }
   },
   {
     "title": "Quarterly Belt Testing Week",
-    "date": "Next: 2025-10 (week 4)",
+    "date": "Posted in class",
     "time": "Evenings",
     "location": "CMAI Karate",
-    "description": "Formal evaluations with pre\u2011checks in class. See Curriculum for requirements."
+    "description": "Formal evaluations with pre-checks in class. Students test when skills are ready, not just when the calendar turns.",
+    "cta": {
+      "label": "Review curriculum",
+      "url": "curriculum.html"
+    }
   },
   {
-    "title": "Summer Weapons Intensive",
-    "date": "2025-06",
-    "time": "Sat 10:00\u201312:00",
+    "title": "Weapons Intensive",
+    "date": "TBD",
+    "time": "Saturday workshop",
     "location": "CMAI Karate",
-    "description": "Modern Arnis focus: striking patterns, disarms, and empty\u2011hand transfers."
+    "description": "Modern Arnis focus: striking patterns, disarms, timing, and empty-hand transfers."
   }
 ]

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Local CMAI Karate content manager for events and student comments.">
+  <title>Site Manager | CMAI Karate</title>
+  <script>try{var t=localStorage.getItem("cmai_theme")||"system";if(t==="system"){document.documentElement.removeAttribute("data-theme")}else{document.documentElement.setAttribute("data-theme",t)}}catch(e){}</script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260606-glossary-popover">
+</head>
+<body data-page="admin">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="siteHeader"></div>
+
+<main id="main">
+  <section class="page-hero admin-hero">
+    <div class="container">
+      <h1>Site manager</h1>
+      <p class="lead">Events and student comments for the CMAI website.</p>
+      <div class="hero-actions">
+        <a class="btn" data-icon="home" href="index.html">Preview home</a>
+        <a class="btn light" data-icon="calendar" href="events.html">Preview events</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light">
+    <div id="adminApp" class="container admin-shell">
+      <div class="admin-toolbar">
+        <div>
+          <h2>Content draft</h2>
+          <p id="adminStatus" class="admin-status" role="status">Loading current site data...</p>
+        </div>
+        <div class="admin-actions" aria-label="Draft actions">
+          <button id="loadCurrentBtn" class="btn light small" data-icon="rotate" type="button">Reload site data</button>
+          <button id="saveDraftBtn" class="btn alt small" data-icon="save" type="button">Save draft</button>
+          <button id="previewDraftBtn" class="btn small" data-icon="eye" type="button">Use draft preview</button>
+          <button id="clearDraftBtn" class="btn light small" data-icon="trash" type="button">Clear local draft</button>
+        </div>
+      </div>
+
+      <div class="admin-grid">
+        <section class="admin-panel" aria-labelledby="eventsEditorTitle">
+          <div class="admin-panel-head">
+            <div>
+              <h3 id="eventsEditorTitle">Events</h3>
+              <p id="eventCount" class="muted"></p>
+            </div>
+            <button id="addEventBtn" class="btn alt small" data-icon="plus" type="button">Add event</button>
+          </div>
+          <div id="eventEditorList" class="admin-editor-list"></div>
+        </section>
+
+        <section class="admin-panel" aria-labelledby="reviewsEditorTitle">
+          <div class="admin-panel-head">
+            <div>
+              <h3 id="reviewsEditorTitle">Student comments</h3>
+              <p id="reviewCount" class="muted"></p>
+            </div>
+            <button id="addReviewBtn" class="btn alt small" data-icon="message" type="button">Add comment</button>
+          </div>
+          <div id="reviewEditorList" class="admin-editor-list"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container admin-preview-grid">
+      <section class="admin-panel" aria-labelledby="eventsPreviewTitle">
+        <div class="admin-panel-head">
+          <h2 id="eventsPreviewTitle">Events preview</h2>
+        </div>
+        <div id="adminEventsPreview" class="timeline admin-events-preview"></div>
+      </section>
+
+      <section class="admin-panel" aria-labelledby="reviewsPreviewTitle">
+        <div class="admin-panel-head">
+          <h2 id="reviewsPreviewTitle">Comments preview</h2>
+        </div>
+        <div id="adminReviewsPreview" class="review-rail admin-review-preview"></div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section compact light">
+    <div class="container admin-export-grid">
+      <section class="admin-panel" aria-labelledby="eventsExportTitle">
+        <div class="admin-panel-head">
+          <h2 id="eventsExportTitle">events.json</h2>
+          <button id="downloadEventsBtn" class="btn small" data-icon="download" type="button">Download</button>
+        </div>
+        <textarea id="eventsJsonOutput" class="admin-json-output" readonly spellcheck="false"></textarea>
+      </section>
+
+      <section class="admin-panel" aria-labelledby="reviewsExportTitle">
+        <div class="admin-panel-head">
+          <h2 id="reviewsExportTitle">reviews.json</h2>
+          <button id="downloadReviewsBtn" class="btn small" data-icon="download" type="button">Download</button>
+        </div>
+        <textarea id="reviewsJsonOutput" class="admin-json-output" readonly spellcheck="false"></textarea>
+      </section>
+    </div>
+  </section>
+</main>
+
+<div id="siteFooter"></div>
+<script src="assets/js/app.js?v=20260606-glossary-popover"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

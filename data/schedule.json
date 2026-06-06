@@ -1,56 +1,63 @@
 {
   "Mon": [
     {
-      "time": "5:30\u20136:15p",
-      "class": "Kids (7\u201312)"
+      "time": "5:30-6:15p",
+      "class": "Kids",
+      "focus": "Ages 7-12"
     },
     {
-      "time": "6:15\u20137:00p",
-      "class": "Teens"
+      "time": "6:15-7:00p",
+      "class": "Teens",
+      "focus": "Fundamentals and application"
     },
     {
-      "time": "7:00\u20138:00p",
-      "class": "Adults/All\u2011levels"
+      "time": "7:00-8:00p",
+      "class": "Adults / All-levels",
+      "focus": "Karate, tuite, self-defense"
     },
     {
-      "time": "8:00\u20138:30p",
+      "time": "8:00-8:30p",
       "class": "Weapons",
-      "note": "Monthly"
+      "focus": "Monthly focus block"
     }
   ],
   "Tue": [
     {
-      "time": "6:00\u20137:00p",
-      "class": "Modern Arnis (All\u2011levels)"
+      "time": "6:00-7:00p",
+      "class": "Modern Arnis",
+      "focus": "All-levels"
     }
   ],
   "Wed": [
     {
-      "time": "5:30\u20136:15p",
-      "class": "Kids (7\u201312)"
+      "time": "5:30-6:15p",
+      "class": "Kids",
+      "focus": "Ages 7-12"
     },
     {
-      "time": "6:15\u20137:00p",
-      "class": "Teens"
+      "time": "6:15-7:00p",
+      "class": "Teens",
+      "focus": "Fundamentals and application"
     },
     {
-      "time": "7:00\u20138:00p",
-      "class": "Adults/All\u2011levels"
+      "time": "7:00-8:00p",
+      "class": "Adults / All-levels",
+      "focus": "Karate, tuite, self-defense"
     }
   ],
   "Thu": [
     {
-      "time": "6:00\u20137:00p",
+      "time": "6:00-7:00p",
       "class": "Jujitsu / Tuite Lab",
-      "note": "Focus block"
+      "focus": "Joint control and safe practice"
     }
   ],
   "Fri": [],
   "Sat": [
     {
-      "time": "10:00\u201312:00p",
-      "class": "Seminar/Intensive",
-      "note": "As scheduled"
+      "time": "10:00a-12:00p",
+      "class": "Seminar / Intensive",
+      "focus": "As scheduled"
     }
   ],
   "Sun": []

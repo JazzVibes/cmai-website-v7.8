@@ -3,174 +3,119 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CMAI Karate</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script>document.addEventListener('DOMContentLoaded',()=>{var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();});</script>
+  <meta name="description" content="CMAI Karate curriculum, instructional videos, glossary, and rank overview.">
+  <title>Curriculum | CMAI Karate</title>
+  <script>try{var t=localStorage.getItem("cmai_theme")||"system";if(t==="system"){document.documentElement.removeAttribute("data-theme")}else{document.documentElement.setAttribute("data-theme",t)}}catch(e){}</script>
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260606-glossary-popover">
 </head>
-<body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html"><img src="assets/img/logo.png" alt="CMAI logo"><span>CMAI Karate</span></a>
-    <button id="navToggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryMenu">☰</button>
-    <nav class="primary" id="primaryMenu">
-      <ul>
-        <li><a class="" href="index.html">Home</a></li>
-        <li><a class="" href="programs.html">Programs</a></li>
-        <li><a class="active" href="curriculum.html">Curriculum</a></li>
-        <li><a class="" href="events.html">Events</a></li>
-        <li><a class="" href="biographies.html">Biographies</a></li>
-        <li><a class="" href="join.html">Join</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<body data-page="curriculum">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="siteHeader"></div>
 
-<main class="container">
-  <section class="section open">
-    <h2>Instructional videos</h2>
-    <p class="prose">Start with these playlists, then visit the full <a target="_blank" rel="noopener" href="https://www.youtube.com/@cmaikarate3400">CMAI Karate channel</a> for seminars, drills, and rank material.</p>
-    <div class="video-grid">
-      <div class="card surface">
-        <h3>Fundamentals &amp; Drills</h3>
-        <div style="position:relative;padding-top:56.25%">
-          <iframe title="CMAI Fundamentals" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0" 
-            src="https://www.youtube-nocookie.com/embed/videoseries?list=PLtLyxM_xUeJuL45VBwhd0n5CcO1GQUm-Y" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="card surface">
-        <h3>Modern Arnis &amp; Weapons</h3>
-        <div style="position:relative;padding-top:56.25%">
-          <iframe title="CMAI Modern Arnis" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;border:0" 
-            src="https://www.youtube-nocookie.com/embed/videoseries?list=PLtLyxM_xUeJvV_KZuJgfvMOhDhXbtNITE" allowfullscreen></iframe>
-        </div>
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Curriculum</h1>
+      <p class="lead">Fundamentals first, then pressure-tested application. CMAI connects kata, tuite, Small Circle Jujitsu, and Modern Arnis through safe partner training.</p>
+      <div class="hero-actions">
+        <a class="btn" data-icon="book-open" href="#rank-overview">Rank Overview</a>
+        <a class="btn light" data-icon="video" target="_blank" rel="noopener" href="https://www.youtube.com/@cmaikarate3400">Watch Videos</a>
       </div>
     </div>
   </section>
 
-  <section class="section open">
-    <h2>Our approach</h2>
-    <div class="prose">
-      <p>Build fundamentals, then pressure‑test.</p>
-      <ul>
-        <li><strong>Basics → padwork → partner drills → controlled scenarios.</strong> Intensity scales to experience.</li>
-        <li><strong>Kata to application.</strong> We extract throws, locks, and strikes (bunkai) and connect them with Small Circle Jujitsu principles.</li>
-        <li><strong>Safety first.</strong> Tapping culture and clear rules keep training productive for all ages.</li>
-      </ul>
+  <section class="section light">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Instructional videos</h2>
+        <p class="section-lead">Start with these playlists, then visit the full CMAI Karate channel for seminars, drills, and rank material.</p>
+      </div>
+      <div class="grid-2">
+        <article>
+          <h3>Fundamentals and drills</h3>
+          <div class="embed">
+            <iframe title="CMAI fundamentals playlist" loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLtLyxM_xUeJuL45VBwhd0n5CcO1GQUm-Y" allowfullscreen></iframe>
+          </div>
+        </article>
+        <article>
+          <h3>Modern Arnis and weapons</h3>
+          <div class="embed">
+            <iframe title="CMAI Modern Arnis playlist" loading="lazy" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLtLyxM_xUeJvV_KZuJgfvMOhDhXbtNITE" allowfullscreen></iframe>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="glossary" class="section open">
-    <h2>Glossary (quick reference)</h2>
-    <div class="grid-3">
-      <div class="card surface"><h3>Osu (Oss)</h3><p>A respectful “understood.”</p></div>
-      <div class="card surface"><h3>Rei</h3><p>Bow at the mat and with partners.</p></div>
-      <div class="card surface"><h3>Gi / Obi</h3><p>Uniform / belt.</p></div>
-      <div class="card surface"><h3>Kata / Bunkai</h3><p>Form / application—how moves work.</p></div>
-      <div class="card surface"><h3>Tuite</h3><p>Okinawan joint‑manipulation skills.</p></div>
-      <div class="card surface"><h3>Tapi‑Tapi</h3><p>Modern Arnis flow drill.</p></div>
+  <section class="section">
+    <div class="container grid-3">
+      <article class="card"><div class="card-body"><h3>Basics to pressure</h3><p>Basics, padwork, partner drills, and controlled scenarios scale in intensity with experience.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Kata to application</h3><p>Bunkai connects forms to throws, locks, strikes, and Small Circle Jujitsu principles.</p></div></article>
+      <article class="card"><div class="card-body"><h3>Safety first</h3><p>Tapping culture, clear rules, and instructor pacing keep training productive for all ages.</p></div></article>
     </div>
   </section>
 
-  <section class="section open">
-    <h2>Rank Requirements (overview)</h2>
-    <div class="prose">
-      <p>Full checklists are available in class. This overview helps guide practice between classes.</p>
+  <section id="glossary" class="section light">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Glossary</h2>
+        <p class="section-lead">Plain-language reference for class, rank material, lineage notes, and historical terms.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card"><div class="card-body"><h3>Dojo</h3><p>The training hall. Students treat the space, instructors, and partners with care because the room is built around shared practice.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Rei</h3><p>A bow, and also the habit of respect behind it. Students bow entering class, leaving class, and working with partners.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Osu</h3><p>A short respectful acknowledgement. In class it usually means understood, yes, or ready.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Gi / Obi</h3><p>The training uniform and belt. The belt marks rank, but the uniform also reminds everyone to train safely and consistently.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Kyu / Dan</h3><p>Kyu ranks are student levels before black belt. Dan ranks are black-belt levels that continue the learning path.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Sensei / Guro</h3><p>Sensei is a Japanese term for teacher. Guro is used in Filipino martial arts for an instructor or teacher.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Renshi / Shihan Dai</h3><p>Renshi is an advanced teaching title. Shihan Dai means assistant or candidate-level teacher under a senior instructor's direction.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Kihon</h3><p>Basics: stances, footwork, blocks, strikes, posture, and movement habits that make later material work.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Kata</h3><p>A structured form. Kata preserves movement patterns, body mechanics, timing, and self-defense ideas for repeated study.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Bunkai</h3><p>Application study. Bunkai asks what a kata movement can do with a partner: strike, turn, lock, throw, escape, or control.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Kumite</h3><p>Partner exchange. Depending on level, it may mean prearranged drills, controlled sparring, or timing work with a partner.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Tuite</h3><p>Okinawan joint-control and manipulation skills. Tuite uses structure, angle, and balance instead of relying on strength.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Kyusho</h3><p>Vital-point and targeting concepts. These ideas are taught with control, safety rules, and practical body mechanics.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Makiwara</h3><p>A traditional striking post used to study alignment, conditioning, and how a strike connects to the floor through the body.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Pinan / Heian</h3><p>Related kata names used in different karate lines. These forms organize beginner-to-intermediate movement and application ideas.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Naihanchi / Seisan</h3><p>Traditional kata names often used to build posture, close-range mechanics, turning power, and stable footwork.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Ryukyu Kempo</h3><p>Okinawan karate language connected to the Ryukyu Islands. It emphasizes practical self-defense, kata application, and body mechanics.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Toudi / Te</h3><p>Older Okinawan terms often translated as Chinese hand or hand. They point to karate's roots before the modern name karate became standard.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Shuri-te / Naha-te / Tomari-te</h3><p>Older regional labels associated with Okinawan training around Shuri, Naha, and Tomari. Many later karate systems grew from these streams.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Karate ryu</h3><p>Ryu means style or school. Names like Goju-ryu, Shorin-ryu, Shito-ryu, and Shotokan identify different karate lineages.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Small Circle Jujitsu</h3><p>Professor Wally Jay's joint-control system. It focuses on small-radius movement, two-way pressure, balance breaking, and efficient control.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Jujitsu / Jujutsu</h3><p>Two common romanizations for related Japanese grappling and control arts. Different schools, books, and lineages often prefer different spellings.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Danzan Ryu / Kodenkan</h3><p>Seishiro Okazaki's Hawaiian jujutsu tradition and school name. It is an important background stream for Wally Jay's Small Circle work.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Judo / Kodokan</h3><p>Judo is Jigoro Kano's modern grappling art. Kodokan is the school and institution Kano founded to organize and transmit it.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Kito-ryu / Koshiki-no-kata</h3><p>Kito-ryu is an older jujutsu school studied by Kano. Koshiki-no-kata preserves classical principles inside judo practice.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Menjo</h3><p>A certificate or license document. Historical menjo help trace who studied with whom and when a teacher received recognition.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Modern Arnis</h3><p>Grandmaster Remy Presas's Filipino martial arts system, using stick work, empty-hand translations, disarms, flow, and practical movement.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Arnis</h3><p>A Filipino martial art associated with stick, blade, and empty-hand methods. Modern Arnis is one major modern teaching system within that world.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Tapi-Tapi</h3><p>A Modern Arnis flow drill for timing, sensitivity, entries, checking hands, disarms, and empty-hand transfer.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Open mat</h3><p>Supervised practice time outside the normal class plan. Students review material, ask questions, and work at an appropriate pace.</p></div></article>
+        <article class="card"><div class="card-body"><h3>Seminar / Testing</h3><p>A seminar is a focused training event, often with a visiting instructor. Testing is a formal review of rank material when students are ready.</p></div></article>
+      </div>
     </div>
-    <div class="grid-3">
-      <div class="card surface"><h3>White → Yellow</h3>
-        <ul>
-          <li>Etiquette &amp; safety (tapping, partner rules)</li>
-          <li>Stances: heisoku, zenkutsu, kiba</li>
-          <li>Footwork: step, slide, turn</li>
-          <li>Blocks: down, outside, rising</li>
-          <li>Strikes: palm, straight punch, front kick</li>
-          <li>Breakfalls: back &amp; side (intro)</li>
-          <li>Self‑defense: wrist releases 1–3</li>
-          <li>Kata: Fukyugata Ichi (or dojo basic)</li>
-        </ul>
+  </section>
+
+  <section id="rank-overview" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Rank overview</h2>
+        <p class="section-lead">Full checklists are available in class. This overview helps guide practice between classes.</p>
       </div>
-      <div class="card surface"><h3>Yellow → Orange</h3>
-        <ul>
-          <li>Kata: Naihanchi 1 (structure &amp; turns)</li>
-          <li>Combinations: basics 1–5</li>
-          <li>Breakfalls: front &amp; roll (intro)</li>
-          <li>Tuite: 2 standing locks</li>
-          <li>Point control: targets &amp; first‑aid rules</li>
-        </ul>
-      </div>
-      <div class="card surface"><h3>Orange → Green</h3>
-        <ul>
-          <li>Kata: Pinan/Heian 1–2</li>
-          <li>Padwork: jab–cross–low kick</li>
-          <li>Tuite: lock flows (standing)</li>
-          <li>Throws: 2 fundamental off‑balances</li>
-          <li>Modern Arnis: 12 strikes + basic disarm</li>
-        </ul>
-      </div>
-      <div class="card surface"><h3>Green → Purple</h3>
-        <ul>
-          <li>Kata: Seisan (intro) or equivalent set</li>
-          <li>Tuite: spiral control, two‑hand rule (SCJ)</li>
-          <li>Breakfalls: high fall prep</li>
-          <li>Scenario: push/grab responses</li>
-        </ul>
-      </div>
-      <div class="card surface"><h3>Purple → Brown</h3>
-        <ul>
-          <li>Kata: advanced set per instructor</li>
-          <li>Throws: hip &amp; leg entries</li>
-          <li>Modern Arnis: tapi‑tapi sequences</li>
-          <li>Tuite: standing→ground transitions</li>
-        </ul>
-      </div>
-      <div class="card surface"><h3>Brown → Black</h3>
-        <ul>
-          <li>Kata: full review + bunkai presentation</li>
-          <li>Teaching: lead warm‑up + drill</li>
-          <li>Pressure test: controlled rounds</li>
-          <li>Service: assist in at least 10 classes</li>
-        </ul>
+      <div class="rank-grid">
+        <article class="card rank-card"><h3>White to Yellow</h3><ul><li>Etiquette and safety</li><li>Stances, footwork, blocks, strikes</li><li>Breakfall introduction</li><li>Wrist releases 1-3</li><li>Introductory kata</li></ul></article>
+        <article class="card rank-card"><h3>Yellow to Orange</h3><ul><li>Naihanchi structure and turns</li><li>Basic combinations</li><li>Front fall and roll introduction</li><li>Two standing locks</li><li>Targeting and first-aid rules</li></ul></article>
+        <article class="card rank-card"><h3>Orange to Green</h3><ul><li>Pinan / Heian kata set</li><li>Padwork combinations</li><li>Tuite lock flows</li><li>Fundamental off-balances</li><li>Modern Arnis 12 strikes</li></ul></article>
+        <article class="card rank-card"><h3>Green to Purple</h3><ul><li>Seisan introduction or equivalent set</li><li>Spiral control and two-hand rule</li><li>High fall preparation</li><li>Push and grab scenarios</li></ul></article>
+        <article class="card rank-card"><h3>Purple to Brown</h3><ul><li>Advanced kata per instructor</li><li>Hip and leg entries</li><li>Tapi-tapi sequences</li><li>Standing-to-ground transitions</li></ul></article>
+        <article class="card rank-card"><h3>Brown to Black</h3><ul><li>Kata review and bunkai presentation</li><li>Lead warm-up and drill</li><li>Controlled pressure test</li><li>Assist in at least 10 classes</li></ul></article>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-col">
-      <h4>Visit</h4>
-      <p>8029 Ramona Blvd W<br>Jacksonville, FL 32221</p>
-      <p><a href="tel:+19047427007">(904) 742-7007</a></p>
-    </div>
-    <div class="footer-col">
-      <h4>Programs</h4>
-      <div class="footer-links">
-        <a href="programs.html#kids" class="btn small alt">Kids</a>
-        <a href="programs.html#teens" class="btn small alt">Teens</a>
-        <a href="programs.html#adults" class="btn small alt">Adults</a>
-        <a href="programs.html#weapons" class="btn small alt">Weapons</a>
-        <a href="programs.html#jujitsu" class="btn small alt">Jujitsu</a>
-        <a href="programs.html#modern-arnis" class="btn small alt">Modern Arnis</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Social</h4>
-      <p><a target="_blank" rel="noopener" href="https://www.facebook.com/people/CMAI-Karate/100063614228167/">Facebook</a><br>
-         <a target="_blank" rel="noopener" href="https://www.youtube.com/@cmaikarate3400">YouTube</a></p>
-      <div style="margin-top:8px">
-        <label for="themeSelect"><small class="muted">Theme</small></label><br>
-        <select id="themeSelect" class="theme-select" aria-label="Theme select">
-          <option value="system" selected>System</option>
-          <option value="light">Light</option>
-          <option value="dark">Dark</option>
-        </select>
-      </div>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <small class="muted">© <span id="year"></span> Carters Martial Arts Institute — CMAI Karate.</small>
-  </div>
-</footer>
-<script src="assets/js/app.js"></script>
+<div id="siteFooter"></div>
+<script src="assets/js/app.js?v=20260606-glossary-popover"></script>
 </body>
 </html>

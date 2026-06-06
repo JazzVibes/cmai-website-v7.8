@@ -8,98 +8,100 @@
     ],
     "systems": [
       "Okinawan Karate (Ryukyu Kempo)",
-      "Small Circle Jujitsu (SCJ)",
+      "Small Circle Jujitsu",
       "Modern Arnis"
     ],
     "teachers": [
-      "Master Jerry Williamson (Shotokan)",
-      "Grandmaster Jack Hogan (Ryukyu Kempo / Kyusho)",
-      "Renshi Michael P. Andrews (HKI)",
-      "Professor Leon Jay (SCJ)",
-      "Guro Bruce Chiu (Modern Arnis)"
+      "Master Jerry Williamson",
+      "Grandmaster Jack Hogan",
+      "Renshi Michael P. Andrews",
+      "Professor Leon Jay",
+      "Guro Bruce Chiu"
     ],
     "ranks": [
-      "Ryukyu Kempo \u2014 4th Dan (2004)",
-      "Kyusho \u2014 Master Level 1 (2004)",
-      "Ryukyu Kempo \u2014 5th Dan (2007, HKI)",
-      "Modern Arnis \u2014 1st Degree (under Guro Bruce Chiu)",
-      "Small Circle Jujitsu \u2014 2nd Dan"
+      "Ryukyu Kempo - 4th Dan (2004)",
+      "Kyusho - Master Level 1 (2004)",
+      "Ryukyu Kempo - 5th Dan (2007, HKI)",
+      "Modern Arnis - 1st Degree",
+      "Small Circle Jujitsu - 2nd Dan"
     ],
     "tags": [
       "Dojo Owner",
       "Curriculum Lead"
     ],
-    "summary": "Sensei Carter blends Okinawan striking with SCJ joint\u2011control and Modern Arnis flow. He emphasizes safety, fundamentals, and respectful culture so students of all ages can progress."
+    "summary": "Sensei Carter blends Okinawan striking with Small Circle Jujitsu joint-control and Modern Arnis flow. He emphasizes safety, fundamentals, and respectful culture so students of all ages can progress."
   },
   {
-    "name": "Grandmaster Jack Hogan (1949\u20132017)",
+    "name": "Grandmaster Jack Hogan (1949-2017)",
     "photo": "assets/img/bios/jack-hogan.jpg",
     "titles": [
-      "Founder, Hogan Karate International (HKI)"
+      "Founder, Hogan Karate International"
     ],
     "systems": [
-      "Ryukyu Kempo (Okinawan Karate)",
+      "Ryukyu Kempo",
       "Kyusho concepts",
-      "Small Circle Jujitsu (influence)"
+      "Small Circle Jujitsu influence"
     ],
     "teachers": [
-      "Collaborators & influences: Prof. Wally Jay (SCJ), GM Remy A. Presas (Modern Arnis), George Dillman (Kyusho)"
+      "Prof. Wally Jay",
+      "GM Remy A. Presas",
+      "George Dillman"
     ],
     "ranks": [
-      "10th Dan \u2014 Ryukyu Kempo",
-      "5th Dan \u2014 Shotokan Karate"
+      "10th Dan - Ryukyu Kempo",
+      "5th Dan - Shotokan Karate"
     ],
     "tags": [
       "Mentor",
       "Lineage"
     ],
-    "summary": "GM Hogan specialized in practical self\u2011defense and pressure\u2011point concepts, teaching internationally and shaping CMAI\u2019s core approach to clean basics and courtesy."
+    "summary": "GM Hogan specialized in practical self-defense and pressure-point concepts, teaching internationally and shaping CMAI's core approach to clean basics and courtesy."
   },
   {
-    "name": "Professor Wally Jay (1917\u20132011)",
+    "name": "Professor Wally Jay (1917-2011)",
     "photo": "assets/img/bios/wally-jay.jpg",
     "titles": [
-      "Founder, Small Circle Jujitsu\u2122"
+      "Founder, Small Circle Jujitsu"
     ],
     "systems": [
       "Small Circle Jujitsu",
-      "Danzan Ry\u016b / Kodenkan Jujutsu",
+      "Danzan Ryu / Kodenkan Jujutsu",
       "Judo"
     ],
     "teachers": [
-      "Seishiro (Henry) Okazaki",
+      "Seishiro Henry Okazaki",
       "Ken Kawachi",
       "Juan Gomez"
     ],
     "ranks": [
-      "10th\u2011dan Jujutsu",
-      "6th\u2011dan Judo"
+      "10th-dan Jujutsu",
+      "6th-dan Judo"
     ],
     "tags": [
       "Lineage"
     ],
-    "summary": "Prof. Jay refined precision and leverage into Small Circle Jujitsu\u2014principles that inform CMAI\u2019s joint\u2011control and safety methods."
+    "summary": "Prof. Jay refined precision and leverage into Small Circle Jujitsu, principles that inform CMAI's joint-control and safety methods."
   },
   {
     "name": "Professor Leon Jay",
     "photo": "assets/img/bios/leon-jay.jpg",
     "titles": [
-      "Headmaster, Small Circle Jujitsu (2nd Generation)"
+      "Headmaster, Small Circle Jujitsu"
     ],
     "systems": [
       "Small Circle Jujitsu",
-      "Kodenkan Jujitsu / Kodokan Judo (background)"
+      "Kodenkan Jujitsu / Kodokan Judo background"
     ],
     "teachers": [
       "Prof. Wally Jay"
     ],
     "ranks": [
-      "Head of System (appointed 2002)"
+      "Head of System, appointed 2002"
     ],
     "tags": [
       "Mentor"
     ],
-    "summary": "Prof. Leon Jay continues SCJ worldwide; his seminars and mentorship reinforce tuite, structure, and safe practice at CMAI."
+    "summary": "Prof. Leon Jay continues Small Circle Jujitsu worldwide. His seminars and mentorship reinforce tuite, structure, and safe practice at CMAI."
   },
   {
     "name": "Guro Bruce Chiu",
@@ -114,12 +116,12 @@
       "Grandmaster Remy A. Presas"
     ],
     "ranks": [
-      "Modern Arnis \u2014 senior instructor (Arnis International)"
+      "Modern Arnis senior instructor"
     ],
     "tags": [
       "Weapons",
       "Flow"
     ],
-    "summary": "A personal student of GM Remy Presas, Guro Bruce supports our Modern Arnis program\u2014flow drills, disarms, and empty\u2011hand translations linked back to kata."
+    "summary": "A personal student of GM Remy Presas, Guro Bruce supports the Modern Arnis program: flow drills, disarms, and empty-hand translations linked back to kata."
   }
 ]
