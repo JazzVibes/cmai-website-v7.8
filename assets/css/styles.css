@@ -825,12 +825,34 @@ ol {
   margin-bottom: 4px;
 }
 
+.program-paths-heading h2 {
+  display: inline-flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.program-paths-logo {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow:
+    0 0 0 5px var(--surface),
+    0 10px 24px rgba(48, 31, 16, 0.16);
+}
+
 .path-card {
   min-height: 100%;
 }
 
 .path-card .media {
-  min-height: 170px;
+  position: relative;
+  min-height: 230px;
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
   background:
     linear-gradient(135deg, rgba(82, 108, 95, 0.14), rgba(183, 70, 46, 0.12)),
     var(--surface-soft);
@@ -838,8 +860,139 @@ ol {
 
 .path-card .media img {
   width: 100%;
-  height: 190px;
+  height: 230px;
   object-fit: cover;
+}
+
+.path-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(17, 13, 10, 0.06), rgba(17, 13, 10, 0.76)),
+    radial-gradient(circle at 82% 18%, rgba(225, 187, 116, 0.24), transparent 34%);
+}
+
+.path-hero-karate img {
+  object-position: center 48%;
+}
+
+.path-hero-jujitsu img,
+.path-hero-arnis img {
+  object-position: center 24%;
+}
+
+.path-sigil {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 66px;
+  height: 66px;
+  border: 1px solid rgba(255, 242, 210, 0.72);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255, 242, 210, 0.22), rgba(12, 12, 10, 0.6)),
+    rgba(17, 13, 10, 0.52);
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.32),
+    inset 0 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+.path-sigil::before,
+.path-sigil::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.sigil-karate::before {
+  width: 38px;
+  height: 38px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sigil-karate::after {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--rust);
+  box-shadow: 0 0 0 7px rgba(183, 70, 46, 0.16);
+  transform: translate(-50%, -50%);
+}
+
+.sigil-small-circle::before {
+  width: 42px;
+  height: 42px;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 10px rgba(255, 242, 210, 0.08);
+  transform: translate(-50%, -50%);
+}
+
+.sigil-small-circle::after {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--rust);
+  border-radius: 50%;
+  transform: translate(-16%, -84%);
+}
+
+.sigil-arnis::before,
+.sigil-arnis::after {
+  width: 48px;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), #f6db9c);
+  box-shadow: 0 0 0 1px rgba(72, 39, 18, 0.4);
+  transform: translate(-50%, -50%) rotate(42deg);
+}
+
+.sigil-arnis::after {
+  transform: translate(-50%, -50%) rotate(-42deg);
+}
+
+.path-banner {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 14px;
+  z-index: 2;
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  color: #fff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+}
+
+.path-banner span {
+  color: #f6db9c;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.path-banner strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  line-height: 0.96;
+  overflow-wrap: break-word;
+}
+
+.path-credit {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+}
+
+.path-credit a {
+  font-weight: 800;
 }
 
 .path-card .media.brand-mark {

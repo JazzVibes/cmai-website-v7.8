@@ -8,7 +8,7 @@ A fully static website for **CMAI Karate** built with plain HTML, CSS and vanill
 assets/
   css/         → site stylesheet (`styles.css`)
   js/          → shared shell, theme, menu, data renderers, and local admin editor
-  img/         → logo, hero image, and biography photos
+  img/         → logo, homepage hero images, program banners, and biography photos
 data/          → JSON datasets for events, bios, schedule and reviews
 index.html     → landing page
 programs.html  → program descriptions and schedule
@@ -24,7 +24,13 @@ admin.html     → direct-link local editor for events and student comments
 - **Styling** – `assets/css/styles.css` defines the responsive design system, page sections, cards, schedule table, event timeline, reviews, and light/dark themes.
 - **Scripting** – `assets/js/app.js` renders the shared header/footer shell, handles theme switching and the mobile menu, loads JSON data when served over HTTP, and falls back to built-in data when opened from disk.
 - **Content pages** – Each HTML file owns only its page-specific content and uses shared shell placeholders (`#siteHeader`, `#siteFooter`) for navigation and footer consistency.
-- **Visual assets** – `assets/img/hero/` contains the rotating homepage hero images. Biography photos live under `assets/img/bios/`.
+- **Visual assets** – `assets/img/hero/` contains the rotating homepage hero images. `assets/img/programs/` contains the Program Paths banner images. Biography photos live under `assets/img/bios/`.
+
+## Program path banner sources
+
+- `assets/img/programs/okinawan-shureimon-pre-1945.jpg` - Pre-war Shureimon gate at Shuri Castle, Naha, Okinawa, destroyed circa May 12, 1945. Source: Naha City historical archive, via Wikimedia Commons. Rights: public domain / PD-Japan-oldphoto.
+- `assets/img/programs/small-circle-okazaki-1929.png` - Seishiro Henry Okazaki portrait from *Self-Defense for Girls and Women*, 1929. Source: Wikimedia Commons. Rights: public domain / US pre-1931 publication.
+- `assets/img/programs/modern-arnis-remy-presas.jpg` - Remy Presas portrait, late 1970s to early 1980s. Source: Wikimedia Commons / Robert James DeMott. Rights: CC BY-SA 3.0.
 
 ## Hero image sources
 
