@@ -23,8 +23,28 @@ admin.html     → direct-link local editor for events and student comments
 
 - **Styling** – `assets/css/styles.css` defines the responsive design system, page sections, cards, schedule table, event timeline, reviews, and light/dark themes.
 - **Scripting** – `assets/js/app.js` renders the shared header/footer shell, handles theme switching and the mobile menu, loads JSON data when served over HTTP, and falls back to built-in data when opened from disk.
+- **Feature switches** – `assets/js/site-config.js` enables or disables optional publishing updates such as title-case headings, history gallery controls, compact schedule rows, schedule revision date display, copyable schedule text, closed-day rows, repeated day labels, and future newsletter signup.
 - **Content pages** – Each HTML file owns only its page-specific content and uses shared shell placeholders (`#siteHeader`, `#siteFooter`) for navigation and footer consistency.
 - **Visual assets** – `assets/img/hero/` contains the rotating homepage hero images. `assets/img/programs/` contains the Program Paths banner images. Biography photos live under `assets/img/bios/`.
+
+## Feature switches
+
+Edit `assets/js/site-config.js` to turn optional updates on or off without removing the implementation:
+
+```js
+window.CMAI_SITE_CONFIG.features = Object.assign({
+  titleCaseSectionHeadings: true,
+  heroHistoryControls: true,
+  scheduleCompactRows: true,
+  scheduleRevisionDate: true,
+  scheduleCopyButton: true,
+  scheduleClosedDayRows: true,
+  scheduleRepeatDayLabels: true,
+  newsletterSignup: false
+}, window.CMAI_SITE_CONFIG.features || {});
+```
+
+Set any item to `false` before publishing if Jerald wants the prior behavior back. `newsletterSignup` is reserved until a newsletter provider or form endpoint is selected.
 
 ## Program path banner sources
 

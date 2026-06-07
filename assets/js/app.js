@@ -12,6 +12,77 @@
   }
 })();
 
+var CMAI_DEFAULT_FEATURES = {
+  titleCaseSectionHeadings: true,
+  heroHistoryControls: true,
+  scheduleCompactRows: true,
+  scheduleRevisionDate: true,
+  scheduleCopyButton: true,
+  scheduleClosedDayRows: true,
+  scheduleRepeatDayLabels: true,
+  newsletterSignup: false
+};
+
+var CMAI_SITE_CONFIG = window.CMAI_SITE_CONFIG || {};
+CMAI_SITE_CONFIG.features = Object.assign(
+  {},
+  CMAI_DEFAULT_FEATURES,
+  CMAI_SITE_CONFIG.features || {},
+  window.CMAI_SITE_FEATURES || {}
+);
+window.CMAI_SITE_CONFIG = CMAI_SITE_CONFIG;
+window.CMAI_SITE_FEATURES = CMAI_SITE_CONFIG.features;
+
+function cmaiFeature(name) {
+  return CMAI_SITE_CONFIG.features[name] !== false;
+}
+
+var CMAI_TITLE_CASE_HEADINGS = {
+  "Program paths": "Program Paths",
+  "Class schedule": "Class Schedule",
+  "Upcoming events": "Upcoming Events",
+  "What students say": "What Students Say",
+  "Quick glossary": "Quick Glossary",
+  "Respect first": "Respect First",
+  "Safety culture": "Safety Culture",
+  "Parent friendly": "Parent Friendly",
+  "Instructional videos": "Instructional Videos",
+  "Fundamentals and drills": "Fundamentals and Drills",
+  "Modern Arnis and weapons": "Modern Arnis and Weapons",
+  "Basics to pressure": "Basics to Pressure",
+  "Kata to application": "Kata to Application",
+  "Safety first": "Safety First",
+  "Rank overview": "Rank Overview",
+  "Planning a visit?": "Planning a Visit?",
+  "Site manager": "Site Manager",
+  "Content draft": "Content Draft",
+  "Student comments": "Student Comments",
+  "Events preview": "Events Preview",
+  "Comments preview": "Comments Preview",
+  "Preview home": "Preview Home",
+  "Preview events": "Preview Events",
+  "Contact and visit": "Contact and Visit",
+  "What to bring": "What to Bring",
+  "What parents can expect": "What Parents Can Expect",
+  "How to start": "How to Start"
+};
+
+function applyFeatureClasses() {
+  document.body.classList.toggle("schedule-compact", cmaiFeature("scheduleCompactRows"));
+  document.body.classList.toggle("newsletter-enabled", cmaiFeature("newsletterSignup"));
+}
+
+function applyTitleCaseHeadings() {
+  if (!cmaiFeature("titleCaseSectionHeadings")) return;
+  Array.prototype.forEach.call(document.querySelectorAll("h1, h2, h3, .section-heading span"), function(element) {
+    var label = element.textContent.trim().replace(/\s+/g, " ");
+    var replacement = CMAI_TITLE_CASE_HEADINGS[label];
+    if (!replacement || replacement === label) return;
+    if (element.children.length) return;
+    element.textContent = replacement;
+  });
+}
+
 var CMAI_DATA = {
   events: [
     {
@@ -72,6 +143,7 @@ var CMAI_DATA = {
     }
   ],
   schedule: {
+    revisionDate: "June 6, 2026",
     Mon: [
       { time: "5:30-6:15p", class: "Kids", focus: "Ages 7-12" },
       { time: "6:15-7:00p", class: "Teens", focus: "Fundamentals and application" },
@@ -750,6 +822,8 @@ var HERO_SLIDES = [
 
 var CMAI_ICON_PATHS = {
   "arrow-down": '<path d="M12 5v14"/><path d="m19 12-7 7-7-7"/>',
+  "arrow-left": '<path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>',
+  "arrow-right": '<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>',
   "arrow-up": '<path d="M12 19V5"/><path d="m5 12 7-7 7 7"/>',
   "book-open": '<path d="M12 7v14"/><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H12v18H5.5A2.5 2.5 0 0 1 3 18.5z"/><path d="M12 3h6.5A2.5 2.5 0 0 1 21 5.5v13a2.5 2.5 0 0 1-2.5 2.5H12"/>',
   calendar: '<path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 9h18"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/>',
@@ -762,7 +836,10 @@ var CMAI_ICON_PATHS = {
   message: '<path d="M21 12a8 8 0 0 1-8 8H7l-4 3 1.4-5.2A8 8 0 1 1 21 12z"/>',
   phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.7.6 2.5a2 2 0 0 1-.5 2.1L8 9.5a16 16 0 0 0 6.5 6.5l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.6.5 2.5.6a2 2 0 0 1 1.7 2z"/>',
   plus: '<path d="M12 5v14"/><path d="M5 12h14"/>',
+  play: '<polygon points="6 3 20 12 6 21 6 3"/>',
+  pause: '<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>',
   rotate: '<path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/>',
+  copy: '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
   save: '<path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8"/><path d="M7 3v5h8"/>',
   shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
   star: '<path d="m12 2 2.9 6 6.6.9-4.8 4.7 1.1 6.6-5.8-3.1-5.8 3.1 1.1-6.6-4.8-4.7 6.6-.9z"/>',
@@ -940,6 +1017,38 @@ function renderSchedule(schedule, targetId) {
   var host = document.getElementById(targetId);
   if (!host) return;
   var order = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  var fullDays = {
+    Mon: "Monday",
+    Tue: "Tuesday",
+    Wed: "Wednesday",
+    Thu: "Thursday",
+    Fri: "Friday",
+    Sat: "Saturday",
+    Sun: "Sunday"
+  };
+  var revisionDate = schedule.revisionDate || schedule.updated || "June 6, 2026";
+  var showRevision = cmaiFeature("scheduleRevisionDate");
+  var showCopy = cmaiFeature("scheduleCopyButton");
+  var showClosedDays = cmaiFeature("scheduleClosedDayRows");
+  var repeatDayLabels = cmaiFeature("scheduleRepeatDayLabels");
+  var tools = null;
+  if (showRevision || showCopy) {
+    tools = document.createElement("div");
+    tools.className = "schedule-tools";
+    if (showRevision) appendText(tools, "p", "Class Schedule Revision: " + revisionDate, "schedule-revision");
+    if (showCopy) {
+      var copyButton = document.createElement("button");
+      copyButton.className = "btn light small schedule-copy";
+      copyButton.type = "button";
+      copyButton.setAttribute("aria-label", "Copy class schedule");
+      copyButton.insertAdjacentHTML("afterbegin", cmaiIcon("copy"));
+      appendText(copyButton, "span", "Copy Schedule");
+      copyButton.addEventListener("click", function() {
+        copySchedule(schedule, revisionDate, copyButton, fullDays, order, showRevision, showClosedDays);
+      });
+      tools.appendChild(copyButton);
+    }
+  }
   var wrap = document.createElement("div");
   wrap.className = "schedule-wrap";
   var table = document.createElement("table");
@@ -953,9 +1062,21 @@ function renderSchedule(schedule, targetId) {
   table.appendChild(thead);
   var tbody = document.createElement("tbody");
   order.forEach(function(day) {
-    (schedule[day] || []).forEach(function(item, index) {
+    var items = schedule[day] || [];
+    if (!items.length) {
+      if (!showClosedDays) return;
+      var emptyRow = document.createElement("tr");
+      appendText(emptyRow, "th", day);
+      appendText(emptyRow, "td", "--");
+      appendText(emptyRow, "td", "No Regular Classes");
+      appendText(emptyRow, "td", "Check events for special sessions");
+      tbody.appendChild(emptyRow);
+      return;
+    }
+    items.forEach(function(item, index) {
       var tr = document.createElement("tr");
-      appendText(tr, "th", index === 0 ? day : "");
+      var showDay = index === 0 || repeatDayLabels;
+      appendText(tr, "th", showDay ? day : "", showDay && index > 0 ? "schedule-day-repeat" : "");
       appendText(tr, "td", item.time || "");
       appendText(tr, "td", item.class || "");
       appendText(tr, "td", item.focus || item.note || "");
@@ -965,7 +1086,74 @@ function renderSchedule(schedule, targetId) {
   table.appendChild(tbody);
   wrap.appendChild(table);
   host.innerHTML = "";
+  if (tools) host.appendChild(tools);
   host.appendChild(wrap);
+}
+
+function scheduleText(schedule, revisionDate, fullDays, order, includeRevision, includeClosedDays) {
+  var lines = ["CMAI Karate Class Schedule"];
+  if (includeRevision) lines.push("Revision: " + revisionDate);
+  lines.push("");
+  order.forEach(function(day) {
+    var items = schedule[day] || [];
+    if (!items.length && !includeClosedDays) return;
+    lines.push(fullDays[day] || day);
+    if (!items.length) {
+      lines.push("No regular classes");
+    } else {
+      items.forEach(function(item) {
+        lines.push([item.time, item.class, item.focus || item.note].filter(Boolean).join(" | "));
+      });
+    }
+    lines.push("");
+  });
+  return lines.join("\n").trim();
+}
+
+function copySchedule(schedule, revisionDate, button, fullDays, order, includeRevision, includeClosedDays) {
+  var text = scheduleText(schedule, revisionDate, fullDays, order, includeRevision, includeClosedDays);
+  var original = button.textContent.trim() || "Copy Schedule";
+
+  function report(label) {
+    var icon = button.querySelector(".icon");
+    button.textContent = "";
+    if (icon) button.appendChild(icon);
+    appendText(button, "span", label);
+    window.setTimeout(function() {
+      var currentIcon = button.querySelector(".icon");
+      button.textContent = "";
+      if (currentIcon) button.appendChild(currentIcon);
+      appendText(button, "span", original);
+    }, 1800);
+  }
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function() {
+      report("Copied");
+    }).catch(function() {
+      fallbackCopy(text, report);
+    });
+    return;
+  }
+  fallbackCopy(text, report);
+}
+
+function fallbackCopy(text, report) {
+  var textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.left = "-9999px";
+  document.body.appendChild(textarea);
+  textarea.select();
+  var success = false;
+  try {
+    success = document.execCommand("copy");
+  } catch (error) {
+    success = false;
+  }
+  document.body.removeChild(textarea);
+  report(success ? "Copied" : "Select Table");
 }
 
 function renderBios(items) {
@@ -1013,7 +1201,9 @@ function renderHeroGallery() {
   var activeIndex = 0;
   var intervalId = null;
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var userPaused = reduceMotion;
   var hero = document.querySelector(".home-hero");
+  var showHistoryControls = cmaiFeature("heroHistoryControls");
 
   gallery.innerHTML = "";
   caption.innerHTML = "";
@@ -1052,7 +1242,7 @@ function renderHeroGallery() {
   var title = document.createElement("strong");
   var hint = document.createElement("span");
   hint.className = "hero-caption-hint";
-  hint.textContent = "Hover or focus for history";
+  hint.textContent = showHistoryControls ? "History gallery" : "Hover or focus for history";
   top.append(title, hint);
 
   var detail = document.createElement("div");
@@ -1066,6 +1256,20 @@ function renderHeroGallery() {
   controls.className = "hero-gallery-controls";
   controls.setAttribute("aria-label", "Hero image options");
 
+  var transport = null;
+  var previousButton = null;
+  var playPauseButton = null;
+  var nextButton = null;
+  if (showHistoryControls) {
+    transport = document.createElement("div");
+    transport.className = "hero-history-controls";
+    transport.setAttribute("aria-label", "History gallery playback controls");
+    previousButton = makeHistoryButton("arrow-left", "Previous history image", "previous");
+    playPauseButton = makeHistoryButton(userPaused ? "play" : "pause", userPaused ? "Play history gallery" : "Pause history gallery", "toggle");
+    nextButton = makeHistoryButton("arrow-right", "Next history image", "next");
+    transport.append(previousButton, playPauseButton, nextButton);
+  }
+
   var buttons = HERO_SLIDES.map(function(slide, index) {
     var button = document.createElement("button");
     button.className = "hero-gallery-dot";
@@ -1075,15 +1279,62 @@ function renderHeroGallery() {
     text.textContent = slide.title;
     button.appendChild(text);
     button.addEventListener("click", function() {
-      setActive(index, true);
+      setActive(index);
+      setUserPaused(true);
     });
     controls.appendChild(button);
     return button;
   });
 
-  caption.append(top, detail, controls);
+  caption.append(top, detail);
+  if (transport) caption.appendChild(transport);
+  caption.appendChild(controls);
 
-  function setActive(index, userInitiated) {
+  if (showHistoryControls) {
+    bindHistoryButton(previousButton, "previous");
+    bindHistoryButton(nextButton, "next");
+    bindHistoryButton(playPauseButton, "toggle");
+  }
+
+  function makeHistoryButton(icon, label, action) {
+    var button = document.createElement("button");
+    button.className = "hero-history-button";
+    button.type = "button";
+    button.setAttribute("data-history-action", action);
+    button.setAttribute("aria-label", label);
+    button.title = label;
+    button.insertAdjacentHTML("afterbegin", cmaiIcon(icon));
+    appendText(button, "span", label, "sr-only");
+    return button;
+  }
+
+  function bindHistoryButton(button, action) {
+    button.addEventListener("mousedown", function(event) {
+      if (event.button !== 0) return;
+      event.preventDefault();
+      activateHistoryButton(action);
+    });
+    button.addEventListener("click", function(event) {
+      event.preventDefault();
+      if (event.detail === 0) activateHistoryButton(action);
+    });
+  }
+
+  function activateHistoryButton(action) {
+    if (action === "previous") {
+      setActive(activeIndex - 1);
+      setUserPaused(true);
+      return;
+    }
+    if (action === "next") {
+      setActive(activeIndex + 1);
+      setUserPaused(true);
+      return;
+    }
+    setUserPaused(!userPaused);
+  }
+
+  function setActive(index) {
     activeIndex = (index + HERO_SLIDES.length) % HERO_SLIDES.length;
     var slide = HERO_SLIDES[activeIndex];
     slides.forEach(function(el, idx) {
@@ -1119,7 +1370,6 @@ function renderHeroGallery() {
       source.appendChild(sourceLink);
       source.append(".");
     }
-    if (userInitiated) stopAutoplay();
   }
 
   function stopAutoplay() {
@@ -1130,10 +1380,30 @@ function renderHeroGallery() {
   }
 
   function startAutoplay() {
-    if (reduceMotion || intervalId) return;
+    if (reduceMotion || userPaused || intervalId) return;
     intervalId = window.setInterval(function() {
-      setActive(activeIndex + 1, false);
+      setActive(activeIndex + 1);
     }, 6500);
+  }
+
+  function setUserPaused(paused) {
+    userPaused = paused;
+    if (userPaused) {
+      stopAutoplay();
+    } else {
+      startAutoplay();
+    }
+    if (showHistoryControls) updatePlayPauseButton();
+  }
+
+  function updatePlayPauseButton() {
+    if (!playPauseButton) return;
+    var label = userPaused ? "Play history gallery" : "Pause history gallery";
+    playPauseButton.setAttribute("aria-label", label);
+    playPauseButton.title = label;
+    playPauseButton.setAttribute("aria-pressed", userPaused ? "true" : "false");
+    playPauseButton.innerHTML = cmaiIcon(userPaused ? "play" : "pause");
+    appendText(playPauseButton, "span", label, "sr-only");
   }
 
   if (hero) {
@@ -1143,7 +1413,8 @@ function renderHeroGallery() {
     hero.addEventListener("focusout", startAutoplay);
   }
 
-  setActive(0, false);
+  setActive(0);
+  if (showHistoryControls) updatePlayPauseButton();
   startAutoplay();
 }
 
@@ -1309,8 +1580,10 @@ function initPageData() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+  applyFeatureClasses();
   renderShell();
   decorateIcons(document);
+  applyTitleCaseHeadings();
   initNav();
   initThemeSelect();
   initGlossaryPopovers();
